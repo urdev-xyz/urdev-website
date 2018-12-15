@@ -58,7 +58,6 @@ video {
     display: flex;
     flex-direction: row;
     align-items: center;
-
     padding: 0 20px;
 
 
@@ -71,7 +70,7 @@ video {
  }
 .links {
     position: fixed;
-    top: 11px;
+    top: 10px;
     right: 15px;
 }
 .links button {
@@ -79,12 +78,12 @@ video {
     height: 100%;
     width: 150px;
 
-    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    border-bottom: 5px solid rgba(0, 0, 0, 0);
     border-radius: 0;
     background: none;
 }
 .links button:hover {
-    border-bottom: 3px solid var(--urdevGreen);
+    border-bottom: 5px solid var(--urdevGreen);
 }
 
 
@@ -95,8 +94,8 @@ video {
     min-height: 100%;
     min-width: 100%;
 
-    padding: 10px 10px;
     background: rgba(22, 22, 22, 0.5);
+
 }
 .content-box {
     display: flex;
@@ -106,21 +105,34 @@ video {
 }
 .content-left {
     height: 100%;
+    padding: 10px;
     align-self: center;
     margin: 10px;
-    max-width: 50%;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
 }
 .content-right {
     height: 100%;
     align-self: center;
     margin: 10px;
-    max-width: 50%;
+    min-width: 50%;
+    display: flex;
+    justify-content: center;
     visibility: hidden;
+}
+
+.content p {
+    margin: 0 0 30px 0;
+}
+.image {
+    height: 50%;
+    width: 50%;
 
 }
 
 
-.footer {
+/*.footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -136,4 +148,32 @@ video {
 
 
     background: rgba(22, 22, 22, 0.7);
+}
+
+*/
+.fade-in {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 830px) {
+    .content-box {
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .links {
+        display: none;
+    }
 }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import video from "./work.mov";
+import iphone from "./iphone.png";
+
 
 
 
@@ -29,11 +31,9 @@ class Navbar extends Component {
     render() {
         return (
             <div className="navbar">
-                <a href='#' id="logo">urdev</a>
+                <a href='/' id="logo">urdev.xyz</a>
                 <div className="links">
-                    <button>ABOUT</button>
-                    <button>BLOG</button>
-                    <button>CONTACT</button>
+
                 </div>
             </div>
         );
@@ -48,15 +48,19 @@ class Content extends Component {
         return (
             <div className="content">
                 <div className="content-box" style={this.setContentHeight()}>
-                    <div className="content-left">
-                        <h1>Developers As A Service</h1>
-                        <h2>Access hundreds of developers from around the world</h2>
-                        <button>find ur dev</button>
+                    <div className="content-left fade-in">
+                        <div>
+                        <h1>Development Made Simple.</h1>
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+                            <button>view on github</button>
+                        </div>
                     </div>
                     <div className="content-right">
-                        <h1>Developers As A Service</h1>
-                        <h2>Access hundreds of developers from around the world</h2>
-                        <button>find ur dev</button>
+                        <div>
+                            <h1>Development Made Simple.</h1>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+                            <button>find ur dev</button>
+                        </div>
                     </div>
                 </div>
             </div>
