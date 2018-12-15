@@ -1,8 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:900');
 
+:root {
+    --urdevGreen: #69f0ae;
+    --urdevDarkGreen: #2bbd7e;
+    --urdevLightGreen: #9fffe0;
 
+}
 html, body {
     font-family: 'Nunito', sans-serif;
+    color: #fff;
+    overflow: hidden;
+    background: black;
+}
+button {
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    background: var(--urdevGreen);
+    padding: 10px;
+    width: 50%;
+    border: none;
+    border-radius: 100px;
+}
+button:hover {
+    background: var(--urdevDarkGreen);
+}
+button:focus {outline:0;}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: var(--urdevGreen);
 }
 .app {
 
@@ -18,17 +48,92 @@ video {
     height: auto;
 }
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    min-width: 100%;
+    z-index: 100;
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0 20px;
+
+
+    background: rgba(22, 22, 22, 0.7);
 
 }
+ #logo {
+     font-weight: 900;
+     font-size: 2.5em;
+ }
+.links {
+    position: fixed;
+    top: 11px;
+    right: 15px;
+}
+.links button {
+    margin: 0;
+    height: 100%;
+    width: 150px;
+
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    border-radius: 0;
+    background: none;
+}
+.links button:hover {
+    border-bottom: 3px solid var(--urdevGreen);
+}
+
+
 .content {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
 
+    padding: 10px 10px;
+    background: rgba(22, 22, 22, 0.5);
+}
+.content-box {
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+    width: 100%;
+}
+.content-left {
+    height: 100%;
+    align-self: center;
+    margin: 10px;
+    max-width: 50%;
+}
+.content-right {
+    height: 100%;
+    align-self: center;
+    margin: 10px;
+    max-width: 50%;
+    visibility: hidden;
 
 }
-.footer {
 
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 0 20px;
+
+
+    background: rgba(22, 22, 22, 0.7);
 }
