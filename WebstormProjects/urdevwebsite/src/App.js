@@ -71,7 +71,7 @@ class Navbar extends Component {
     }
     render() {
         return (
-            <div className="navbar">
+            <div className="navbar mobile-nav">
                 <a href='/' id="logo">urdev.xyz</a>
                 <div className="links">
                     <button className='icon-link'>

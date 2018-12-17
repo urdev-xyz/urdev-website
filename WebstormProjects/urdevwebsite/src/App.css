@@ -6,6 +6,12 @@
     --urdevLightGreen: #9fffe0;
 
 }
+::selection {
+    background: var(--urdevLightGreen); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+    background: var(--urdevLightGreen); /* Gecko Browsers */
+}
 html, body {
     font-family: 'Nunito', sans-serif;
     color: #fff;
@@ -50,6 +56,9 @@ video {
     width: auto;
     height: auto;
 }
+.mobile-nav {
+
+}
 .navbar {
     position: fixed;
     top: 0;
@@ -67,6 +76,7 @@ video {
     background: rgba(22, 22, 22, 0.7);
 
 }
+
  #logo {
      padding: 0 20px 8px 20px;
      font-weight: 900;
@@ -109,8 +119,11 @@ video {
     height: 65%;
     width: 25%;
 }
-.icon:hover path{
+.icon path {
     fill: white;
+}
+.icon:hover path{
+    fill: var(--urdevGreen);
 
 }
 
@@ -189,7 +202,12 @@ video {
 }
 
 @media screen and (max-width: 850px) {
+    .navbar {
+        display: flex;
+    }
+    .mobile-nav {
 
+    }
     .content-component {
         width: 100%;
         padding: 0 10px;
