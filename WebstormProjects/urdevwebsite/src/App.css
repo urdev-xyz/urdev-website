@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:900');
 
 :root {
-    --urdevGreen: #69f0ae;
+    --urdevGreen: #69f0ae; /* #69f0ae */
     --urdevDarkGreen: #2bbd7e;
     --urdevLightGreen: #9fffe0;
 
@@ -11,14 +11,17 @@ html, body {
     color: #fff;
     overflow: hidden;
     background: black;
+    text-decoration-color: #2bbd7e;
 }
 button {
     font-size: 1.2rem;
     color: #fff;
     font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
     background: var(--urdevGreen);
     padding: 10px;
     width: 50%;
+    max-width: 300px;
     border: none;
     border-radius: 100px;
 }
@@ -51,88 +54,98 @@ video {
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px;
+    height: 70px;
     min-width: 100%;
     z-index: 100;
     float: right;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 0px;
 
 
     background: rgba(22, 22, 22, 0.7);
 
 }
  #logo {
+     padding: 0 20px 8px 20px;
      font-weight: 900;
      font-size: 2.5em;
  }
 .links {
-    position: fixed;
-    top: 10px;
-    right: 15px;
+    width: 100%;
+
 }
+
+
+
 .links button {
     margin: 0;
-    height: 100%;
+    height: 70px;
     width: 150px;
-
-    border-bottom: 5px solid rgba(0, 0, 0, 0);
+    float: right;
+    padding: 0;
+    font-size: 1rem;
     border-radius: 0;
     background: none;
 }
 .links button:hover {
-    border-bottom: 5px solid var(--urdevGreen);
+    background: var(--urdevGreen);
+    font-weight: bold;
+
+}
+
+.icon-link {
+    display: none;
+
+}
+.icon-link:hover {
+    background: none !important;
+}
+.icon {
+    margin-top: 0px;
+    margin-right: 20px;
+    float: right;
+    height: 65%;
+    width: 25%;
+}
+.icon:hover path{
+    fill: white;
+
 }
 
 
 .content {
     position: fixed;
-    top: 0;
+    top: 70px;
     left: 0;
     min-height: 100%;
     min-width: 100%;
 
     background: rgba(22, 22, 22, 0.5);
 
-}
-.content-box {
     display: flex;
     flex-direction: row;
-    min-height: 100%;
-    width: 100%;
+    flex-wrap: wrap;
 }
-.content-left {
-    height: 100%;
-    padding: 10px;
-    align-self: center;
-    margin: 10px;
-    min-width: 50%;
-    display: flex;
-    justify-content: center;
-}
-.content-right {
-    height: 100%;
-    align-self: center;
-    margin: 10px;
-    min-width: 50%;
-    display: flex;
-    justify-content: center;
-    visibility: hidden;
-}
-
-.content p {
-    margin: 0 0 30px 0;
-}
-.image {
-    height: 50%;
+.content-component {
+    padding: 0 20px;
+    margin-bottom: 200px;
     width: 50%;
-
+    min-height: 100%;
+    align-self: flex-end;
+}
+.content-component h1 {
+    font-weight: bold;
+}
+.content-component p {
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 
-/*.footer {
+
+.footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -143,14 +156,20 @@ video {
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-align: center;
+    padding: 0 0px;
 
-    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.6);
 
 
-    background: rgba(22, 22, 22, 0.7);
+    background: rgba(22, 22, 22, 0.3);
+}
+.footer span {
+    width: 100%;
+    font-size: .8rem;
+    text-align: center;
 }
 
-*/
 .fade-in {
     opacity: 1;
     animation-name: fadeInOpacity;
@@ -158,6 +177,7 @@ video {
     animation-timing-function: ease-in;
     animation-duration: 1s;
 }
+
 
 @keyframes fadeInOpacity {
     0% {
@@ -168,12 +188,26 @@ video {
     }
 }
 
-@media screen and (max-width: 830px) {
-    .content-box {
-        margin-top: 50px;
-        flex-wrap: wrap;
+@media screen and (max-width: 850px) {
+
+    .content-component {
+        width: 100%;
+        padding: 0 10px;
+        margin: 0;
+        align-self: center;
+
     }
-    .links {
+    .link{
         display: none;
     }
+    .icon-link {
+        display: initial;
+    }
+}
+@media screen and (max-width: 450px) {
+
+        .content-component{
+            align-self: self-end;
+        }
+
 }
