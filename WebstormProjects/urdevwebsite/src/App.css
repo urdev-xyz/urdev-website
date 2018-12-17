@@ -57,7 +57,7 @@ video {
     height: auto;
 }
 .mobile-nav {
-
+    visibility: hidden;
 }
 .navbar {
     position: fixed;
@@ -201,16 +201,49 @@ video {
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 700px) {
     .navbar {
+        visibility: visible;
         display: flex;
+        background: rgba(22, 22, 22, 0.5);
+        align-content: center;
+        flex-direction: row;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    #logo {
+        position: fixed;
+        top: 10px;
     }
     .mobile-nav {
-
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        z-index: 1000;
+    }
+    .mobile-links button{
+        margin: 10px 0 0 0;
+        height: 70px;
+        width: 33%;
+        float: right;
+        padding: 0;
+        font-size: 1rem;
+        border-radius: 0;
+        color: white;
+        border-bottom: white;
+        background: none;
+    }
+    .mobile-links button:hover {
+        color: var(--urdevGreen);
+    }
+    .mobile-link {
+        visibility: visible;
+        display: block;
     }
     .content-component {
         width: 100%;
-        padding: 0 10px;
         margin: 0;
         align-self: center;
 
@@ -219,13 +252,13 @@ video {
         display: none;
     }
     .icon-link {
-        display: initial;
+        display: none;
     }
 }
 @media screen and (max-width: 450px) {
 
         .content-component{
-            align-self: self-end;
+            align-self: center;
         }
 
 }

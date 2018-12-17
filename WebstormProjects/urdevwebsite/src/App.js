@@ -25,7 +25,8 @@ class App extends Component {
     updateToAbout = () => {
         this.setState({
             contentTitle: 'About Us',
-            contentParagraph: '--',
+            contentParagraph: '\n' +
+                'Urdev is a freelance development company founded to make software development hassle free for the consumer. Our team of handpicked individuals from around the country are proficient in both front, and backend development to ensure that every project is handled with the utmost care.',
         })
     }
     updateToContact = () => {
@@ -35,9 +36,12 @@ class App extends Component {
         })
     }
 
+    componentDidMount(){
+        document.title = "urdev.xyz"
 
+    }
     componentDidUpdate() {
-        this.setState();
+
     }
 
   render() {
@@ -46,8 +50,8 @@ class App extends Component {
                 <video autoPlay muted loop >
                     <source src={video} type="video/mp4"/>
                 </video>
+            <MobileNavbar homeChange={this.updateToHome.bind(this)} aboutChange={this.updateToAbout.bind(this)} contactChange={this.updateToContact.bind(this)}/>
             <Navbar homeChange={this.updateToHome.bind(this)} aboutChange={this.updateToAbout.bind(this)} contactChange={this.updateToContact.bind(this)}>
-
             </Navbar>
             <div className="content">
                 <div className={'content-component ' + this.state.fadeIn}>
@@ -71,7 +75,7 @@ class Navbar extends Component {
     }
     render() {
         return (
-            <div className="navbar mobile-nav">
+            <div className="navbar">
                 <a href='/' id="logo">urdev.xyz</a>
                 <div className="links">
                     <button className='icon-link'>
@@ -94,6 +98,24 @@ class Navbar extends Component {
                 </div>
             </div>
         );
+    }
+}
+
+class MobileNavbar extends React.Component {
+    constructor(props){
+        super(props);
+
+    }
+    render() {
+        return (
+            <div className="mobile-nav">
+                <div className="mobile-links">
+                    <button className='mobile-link' onClick={this.props.contactChange}>CONTACT</button>
+                    <button className='mobile-link' onClick={this.props.aboutChange}>ABOUT</button>
+                    <button className='mobile-link' onClick={this.props.homeChange}>HOME</button>
+                </div>
+            </div>
+        )
     }
 }
 
