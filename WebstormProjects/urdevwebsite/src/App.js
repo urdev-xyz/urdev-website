@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import video from "./work.mov";
-import menu from "./menu.svg";
 
 
 
