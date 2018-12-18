@@ -26,7 +26,7 @@ class App extends Component {
         this.setState({
             contentTitle: 'About Us',
             contentParagraph: '\n' +
-                'The urdev team is constantly growing with a wide range of skills, we currently specialize in Web and Mobile App Development with experience in the latest frameworks. Our main development team consists of experts in frameworks like React, Angular, Flutter, NodeJS, and Flask. ',
+                'The urdev team is constantly growing with a wide range of skills, we currently specialize in Web App, Mobile App, and Database Development with experience in the latest frameworks. Our main development team consists of experts in frameworks like React, Angular, Flutter, NodeJS, and Flask. ',
         })
     }
     updateToContact = () => {
