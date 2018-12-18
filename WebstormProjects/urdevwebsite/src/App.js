@@ -10,7 +10,7 @@ class App extends Component {
         super(props);
         this.state = {
             contentTitle: 'Development Made Simple.',
-            contentParagraph: 'The first six weeks take place entirely online, M-F 9-5 Pacific Time, using our award-winning remote delivery format. The sixth week is asynchronous. Then the program feeds into the software engineering immersive at any of our locations',
+            contentParagraph: 'At urdev we use a combination of the latest technologies and development practices to deliver fast, easy-to-use, and scalable applications. We understand every organization is different and has its own constraints to work with, urdev has the flexibility to scale accordingly and meet your organization\'s needs on time and without compromise.',
             fadeIn: 'fade-in'
         }
 
@@ -19,20 +19,20 @@ class App extends Component {
     updateToHome = () => {
         this.setState({
             contentTitle: 'Development Made Simple.',
-            contentParagraph: '--'
+            contentParagraph: 'At urdev we use a combination of the latest technologies and development practices to deliver fast, easy-to-use, and scalable applications. We understand every organization is different and has its own constraints to work with, urdev has the flexibility to scale accordingly and meet your organization\'s needs on time and without compromise.'
         })
     }
     updateToAbout = () => {
         this.setState({
             contentTitle: 'About Us',
             contentParagraph: '\n' +
-                'Urdev is a freelance development company founded to make software development hassle free for the consumer. Our team of handpicked individuals from around the country are proficient in both front, and backend development to ensure that every project is handled with the utmost care.',
+                'The urdev team is constantly growing with a wide range of skills, we currently specialize in Web and Mobile App Development with experience in the latest frameworks. Our main development team consists of experts in frameworks like React, Angular, Flutter, NodeJS, and Flask. ',
         })
     }
     updateToContact = () => {
         this.setState({
             contentTitle: 'Contact Us',
-            contentParagraph: '--',
+            contentParagraph: 'To learn more about our innovative software development solutions, and our highly competitive pricing models, please email us at contact@urdev.xyz, or call us at 404-901-3447\n',
         })
     }
 

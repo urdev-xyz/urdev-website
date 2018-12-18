@@ -254,6 +254,9 @@ video {
     .icon-link {
         display: none;
     }
+    .footer {
+        visibility: hidden;
+    }
 }
 @media screen and (max-width: 450px) {
 
