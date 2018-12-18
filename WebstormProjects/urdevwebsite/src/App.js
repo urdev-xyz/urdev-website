@@ -32,7 +32,7 @@ class App extends Component {
     updateToContact = () => {
         this.setState({
             contentTitle: 'Contact Us',
-            contentParagraph: 'To learn more about our innovative software development solutions, and our highly competitive pricing models, please email us at contact@urdev.xyz, or call us at 404-901-3447\n',
+            contentParagraph: 'To learn more about our innovative software development solutions, and our highly competitive pricing models, please email us at contact@urdev.xyz' ,
         })
     }
 
@@ -57,7 +57,7 @@ class App extends Component {
                 <div className={'content-component ' + this.state.fadeIn}>
                     <h1>{this.state.contentTitle}</h1>
                     <p>{this.state.contentParagraph}</p>
-                    <button>Give us a call.</button>
+                    <a id="mailto" href="mailto:contact@urdev.xyz" ><button>Get In Touch.</button></a>
                 </div>
 
             </div>
